@@ -1,9 +1,54 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0" version="26.2.14">
-  <diagram name="Страница — 1" id="fLYw4hCJlVGGEEXkQrG1">
-    <mxGraphModel>
+  <diagram name="ER Перевозки Грузов" id="fLYw4hCJlVGGEEXkQrG1">
+    <mxGraphModel dx="2058" dy="1112" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="gjsFZleW79kHtB3h6otO-1" value="Водители&#xa;- ФИО&#xa;- ПаспортныеДанные&#xa;- Телефон&#xa;- Организация" style="shape=swimlane;rounded=1;horizontal=0;startSize=30;fillColor=#dae8fc" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="240" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="gjsFZleW79kHtB3h6otO-2" value="Организации&#xa;- Наименование&#xa;- ИНН&#xa;- КПП&#xa;- Адрес" style="shape=swimlane;rounded=1;horizontal=0;startSize=30;fillColor=#d5e8d4" vertex="1" parent="1">
+          <mxGeometry x="340" y="40" width="240" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="gjsFZleW79kHtB3h6otO-3" value="Транспортные Средства&#xa;- МаркаТС&#xa;- ГосНомерТягача&#xa;- ГосНомерПрицепа&#xa;- ТипТС" style="shape=swimlane;rounded=1;horizontal=0;startSize=30;fillColor=#ffe6cc" vertex="1" parent="1">
+          <mxGeometry x="40" y="280" width="240" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="gjsFZleW79kHtB3h6otO-4" value="Маршруты&#xa;- ПунктОтправления&#xa;- ПунктНазначения&#xa;- РасстояниеКм" style="shape=swimlane;rounded=1;horizontal=0;startSize=30;fillColor=#f8cecc" vertex="1" parent="1">
+          <mxGeometry x="340" y="280" width="240" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="gjsFZleW79kHtB3h6otO-5" value="Доверенности&#xa;- Водитель&#xa;- ТранспортноеСредство&#xa;- Организация&#xa;- ДатаВыдачи&#xa;- ДатаОкончания&#xa;- ПравоПодписиТН" style="shape=swimlane;rounded=1;horizontal=0;startSize=30;fillColor=#e1d5e7" vertex="1" parent="1">
+          <mxGeometry x="640" y="40" width="260" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="gjsFZleW79kHtB3h6otO-6" value="Заявки&#xa;- Заказчик&#xa;- ПериодОтгрузкиНачало&#xa;- ПериодОтгрузкиОкончание&#xa;- ТипТС&#xa;- КоличествоТС&#xa;- СтоимостьУслуг&#xa;- УсловияПеревозки" style="shape=swimlane;rounded=1;horizontal=0;startSize=30;fillColor=#fff2cc" vertex="1" parent="1">
+          <mxGeometry x="640" y="280" width="260" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="gjsFZleW79kHtB3h6otO-7" value="Транспортные Накладные&#xa;- Водитель&#xa;- ТранспортноеСредство&#xa;- Грузоотправитель&#xa;- Грузополучатель&#xa;- ПунктОтправления&#xa;- ПунктНазначения&#xa;- ДатаПогрузки&#xa;- ДатаДоставки&#xa;- Груз&#xa;- МассаГруза" style="shape=swimlane;rounded=1;horizontal=0;startSize=30;fillColor=#cce5ff" vertex="1" parent="1">
+          <mxGeometry x="940" y="160" width="300" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="gjsFZleW79kHtB3h6otO-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block" edge="1" parent="1" source="gjsFZleW79kHtB3h6otO-1" target="gjsFZleW79kHtB3h6otO-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjsFZleW79kHtB3h6otO-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block" edge="1" parent="1" source="gjsFZleW79kHtB3h6otO-3" target="gjsFZleW79kHtB3h6otO-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjsFZleW79kHtB3h6otO-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block" edge="1" parent="1" source="gjsFZleW79kHtB3h6otO-2" target="gjsFZleW79kHtB3h6otO-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjsFZleW79kHtB3h6otO-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block" edge="1" parent="1" source="gjsFZleW79kHtB3h6otO-2" target="gjsFZleW79kHtB3h6otO-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjsFZleW79kHtB3h6otO-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block" edge="1" parent="1" source="gjsFZleW79kHtB3h6otO-1" target="gjsFZleW79kHtB3h6otO-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjsFZleW79kHtB3h6otO-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block" edge="1" parent="1" source="gjsFZleW79kHtB3h6otO-3" target="gjsFZleW79kHtB3h6otO-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjsFZleW79kHtB3h6otO-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block" edge="1" parent="1" source="gjsFZleW79kHtB3h6otO-4" target="gjsFZleW79kHtB3h6otO-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjsFZleW79kHtB3h6otO-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block" edge="1" parent="1" source="gjsFZleW79kHtB3h6otO-2" target="gjsFZleW79kHtB3h6otO-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
